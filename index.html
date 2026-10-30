@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Almeida | WDD 231 Home</title>
+  <meta name="description" content="Hugo Almeida's WDD 231 home page: an introduction, web development projects, and Web and Computer Programming certificate courses.">
+  <meta name="author" content="Hugo Almeida">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Hugo Almeida home">
+      <img src="images/favicon.svg" alt="" width="48" height="48">
+      <span>Hugo Almeida</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation">
+      <span class="menu-icon" aria-hidden="true">☰</span>
+    </button>
+  </header>
+  <nav id="primary-navigation" class="navigation" aria-label="Main navigation">
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="#">Chamber</a>
+      <a href="#">Final</a>
+    </div>
+  </nav>
+  <main id="main">
+    <h1>Home</h1>
+    <div class="intro-grid">
+      <section class="panel about">
+        <h2>About Me</h2>
+        <div class="panel-body">
+          <p>Hello! I'm Hugo, a software development student from Brazil. I'm almost finishing my studies and excited to apply my knowledge in real-world projects.</p>
+          <p>I like to play sports and watch movies in my free time. I am currently employed in the IT department.</p>
+        </div>
+      </section>
+      <section class="panel photo-panel">
+        <h2>Student Photo</h2>
+        <div class="panel-body">
+          <!-- Replace this illustration with your own optimized photo (125 kB maximum), then update the alt text. -->
+          <img class="student-photo" src="images/Hugo_profile.png" alt="Profile illustration; student photo to be added" width="320" height="320">
+        </div>
+      </section>
+    </div>
+    <section class="panel certificate">
+      <h2>Web Certificate Courses</h2>
+      <div class="panel-body">
+        <div class="course-filters" role="group" aria-label="Filter certificate courses">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="CSE" aria-pressed="false">CSE</button>
+          <button type="button" data-filter="WDD" aria-pressed="false">WDD</button>
+        </div>
+        <div id="course-list" class="course-grid"></div>
+        <p id="course-summary" class="course-summary" role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="course-legend"><span aria-hidden="true">✓</span> Completed courses are marked with a check.</p>
+        <noscript><p>Enable JavaScript to view and filter the certificate courses.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="social-links" aria-label="Social links">
+      <a href="https://github.com/hugolalmeida/wdd231" aria-label="Hugo Almeida's GitHub repository"><img src="images/github.svg" alt="" width="28" height="28"></a>
+      <!-- Replace this URL with your personal LinkedIn profile. -->
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="" width="28" height="28"></a>
+      <a href="https://www.linkedin.com/in/hugollalmeida/" aria-label="freeCodeCamp"><img src="images/code.svg" alt="" width="28" height="28"></a>
+    </div>
+    <p>© <span id="currentyear"></span> · Hugo Almeida · Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
