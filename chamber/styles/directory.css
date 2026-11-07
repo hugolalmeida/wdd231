@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	background-color: #333;
+	color: #eee;
+	padding: 1rem;
+	text-align: center;
+}
+
+main {
+	margin: 0 auto;
+	padding: 0.5rem;
+	max-width: 700px;
+	background-color: #fff;
+	font-family: Acme, Arial, sans-serif;
+}
+
+.menu {
+	margin: 1rem auto;
+	padding: 0.5rem;
+	background-color: #333;
+	text-align: center;
+
+	button {
+		padding: 0.5rem 1rem;
+		font-weight: 700;
+	}
+}
+
+section {
+	border: 1px solid rgb(0 0 0 / 10%);
+	padding: 0.5rem;
+	background-color: #ddd;
+
+	a {
+		font-family: Arial, sans-serif;
+		font-size: 0.85rem;
+		color: navy;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+
+	section {
+		text-align: center;
+		& > * {
+			margin: 0.1rem;
+		}
+	}
+
+	img {
+		border: 1px solid #fff;
+		box-shadow: 0 0 1rem #555;
+	}
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+
+	section {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		margin: 0;
+		padding: 0.25rem;
+
+		& > * {
+			margin: 0 1rem;
+		}
+
+		img {
+			display: none;
+		}
+
+		h3 {
+			font-size: 1rem;
+		}
+
+		&:nth-child(even) {
+			background-color: #bbb;
+		}
+	}
+}
+
+img {
+	width: auto;
+	height: 75px;
+}

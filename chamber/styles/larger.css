@@ -1,0 +1,10 @@
+@media (min-width: 640px) {
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .js .menu-toggle { display: none; }
+    .js .navigation:not(.open) { display: block; }
+    .navigation ul { display: flex; margin: 0; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .list section { display: grid; grid-template-columns: 1.5fr 2fr 1fr 1fr; align-items: center; gap: 1rem; }
+    .list section > * + * { margin-top: 0; }
+    .site-footer { grid-template-columns: 1fr 1fr; }
+}
