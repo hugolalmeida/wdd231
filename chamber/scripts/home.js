@@ -23,7 +23,7 @@ function createSpotlight(member) {
     const website = document.createElement("a");
     website.href = member.website;
     website.textContent = "Visit website";
-    website.setAttribute("aria-label", `Visit ${member.name} website`);
+    website.setAttribute("aria-label", `Visit website for ${member.name}`);
     card.append(logo, title, level, address, phone, website);
     return card;
 }
