@@ -1,11 +1,9 @@
-document.documentElement.classList.add("js");
-
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");
 const display = document.querySelector("#directory");
 const directoryStatus = document.querySelector("#directory-status");
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
+
+
 const membershipLabels = { 1: "Member", 2: "Silver", 3: "Gold" };
 
 function setView(view) {
@@ -58,19 +56,12 @@ async function loadMembers() {
         }
         const members = await response.json();
         display.replaceChildren(...members.map(createMemberCard));
-    } catch (error) {
+    } catch {
         directoryStatus.textContent = "The member directory could not be loaded. Please try again later.";
-        console.error(error);
+
     }
 }
 
 gridButton.addEventListener("click", () => setView("grid"));
 listButton.addEventListener("click", () => setView("list"));
-menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-});
-
-document.querySelector("#currentyear").textContent = new Date().getFullYear();
-document.querySelector("#lastmodified").textContent = document.lastModified;
 loadMembers();

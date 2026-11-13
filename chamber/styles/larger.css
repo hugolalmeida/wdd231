@@ -1,5 +1,5 @@
 @media (min-width: 640px) {
-    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
     .js .menu-toggle { display: none; }
     .js .navigation:not(.open) { display: block; }
     .navigation ul { display: flex; margin: 0; }

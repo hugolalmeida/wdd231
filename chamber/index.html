@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chamber of Commerce project for WDD 231, coming in week 2.">
-  <meta name="author" content="Hugo Almeida">
-  <title>Chamber Project | Hugo Almeida</title>
-  <link rel="stylesheet" href="../styles/small.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Volta Redonda Chamber of Commerce</title>
+    <meta name="description" content="Grow your business in Volta Redonda. Connect with chamber members, explore community events, and check the latest weather in the Steel City.">
+    <meta name="author" content="Hugo Almeida">
+    <meta property="og:title" content="Home | Volta Redonda Chamber of Commerce">
+    <meta property="og:description" content="Local connections. Shared opportunities. Discover businesses and community events in Volta Redonda, Brazil.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hugolalmeida.github.io/wdd231/chamber/images/chamber-social.png">
+    <meta property="og:url" content="https://hugolalmeida.github.io/wdd231/chamber/">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/weather-config.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
-<body><main><h1>Chamber Project</h1></main></body>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="images/volta-redonda-coat-of-arms.svg" width="52" height="46" alt=""><span>Volta Redonda Chamber of Commerce</span></a>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+        <nav id="primary-navigation" class="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="home-main">
+        <section class="hero" aria-labelledby="home-heading">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/volta-redonda-hero-small.webp">
+                <img src="images/volta-redonda-hero.webp" width="1400" height="1050" alt="Panoramic view of central Volta Redonda, with buildings, green hills and the steelworks" fetchpriority="high">
+            </picture>
+            <div class="hero-content">
+                <p class="eyebrow">Volta Redonda · Rio de Janeiro</p>
+                <h1 id="home-heading">Volta Redonda Chamber of Commerce</h1>
+                <p>Local connections. Shared opportunities. Build your next chapter in the Steel City.</p>
+                <a class="button-link" href="join.html">Join the chamber</a>
+            </div>
+        </section>
+        <p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Volta_Redonda_01.jpg">HenriqueBarraMansa</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and converted to WebP; cropped in layout.</p>
+
+        <div class="home-summary">
+            <section class="info-panel" aria-labelledby="events-heading">
+                <h2 id="events-heading">Community events</h2>
+                <article class="event">
+                    <h3>Business connections breakfast</h3>
+                    <p class="event-schedule">First Tuesday of each month · 8–9 a.m.</p>
+                    <p>Meet local business owners, exchange ideas, and introduce your business to the community.</p>
+                    <p>Location: Aterrado business district.</p>
+                </article>
+                <article class="event">
+                    <h3>Small business workshop</h3>
+                    <p class="event-schedule">Third Thursday of each month · 6–7:30 p.m.</p>
+                    <p>Explore practical ways to reach customers and strengthen your digital presence.</p>
+                    <p>Location: Vila Santa Cecília.</p>
+                </article>
+                <p class="section-note">Sample recurring events for this educational project. Times are local to Volta Redonda.</p>
+            </section>
+            <section class="info-panel" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Current weather</h2>
+                <p>Volta Redonda, RJ</p>
+                <p id="weather-status" role="status">Loading current weather…</p>
+                <div id="current-weather" hidden>
+                    <p class="temperature" id="temperature"></p>
+                    <p id="weather-description"></p>
+                    <p id="humidity"></p>
+                </div>
+                <a class="weather-source" href="https://openweathermap.org/">Weather data: OpenWeatherMap</a>
+            </section>
+            <section class="info-panel" aria-labelledby="forecast-heading">
+                <h2 id="forecast-heading">3-day forecast</h2>
+                <p id="forecast-status" role="status">Loading forecast…</p>
+                <ul id="forecast" class="forecast-list"></ul>
+                <p id="forecast-note" class="section-note" hidden>Temperature near noon (°C), for the next three days. Volta Redonda local time.</p>
+            </section>
+        </div>
+
+        <section aria-labelledby="spotlights-heading">
+            <div class="spotlight-heading">
+                <h2 id="spotlights-heading">Member spotlights</h2>
+                <a href="directory.html">Explore all members →</a>
+            </div>
+            <p id="spotlight-status" role="status">Loading member spotlights…</p>
+            <div id="spotlights" class="spotlights"></div>
+            <p class="section-note">Meet a rotating selection of our Gold and Silver members. Membership levels are examples for this educational project.</p>
+        </section>
+        <noscript><p>Enable JavaScript to load live weather and member spotlights. You can still browse our community events and navigation links.</p></noscript>
+    </main>
+    <footer class="site-footer">
+        <div>
+            <p><strong>Volta Redonda Chamber of Commerce</strong></p>
+            <p>Volta Redonda, RJ, Brazil</p>
+            <p>Local business resource: <a href="https://www.cdlvr.org.br/fale-conosco">CDL Volta Redonda</a></p>
+            <address>Rua Simão da Cunha Gago, 19 – Aterrado<br><a href="tel:+552433448050">+55 (24) 3344-8050</a></address>
+        </div>
+        <div>
+            <p>&copy; <span id="currentyear"></span> Volta Redonda Chamber of Commerce</p>
+            <p>Hugo L. Almeida | WDD 231</p>
+            <p>Last modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+</body>
 </html>

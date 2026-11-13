@@ -11,7 +11,7 @@
 a { color: var(--black); overflow-wrap: anywhere; }
 button, a { touch-action: manipulation; }
 :focus-visible { outline: 3px solid var(--black); box-shadow: 0 0 0 6px var(--yellow); outline-offset: 4px; }
-.skip-link { position: absolute; top: -5rem; left: 1rem; padding: .75rem; background: var(--yellow); color: var(--black); }
+.skip-link { position: absolute; z-index: 10; top: -5rem; left: 1rem; padding: .75rem; background: var(--yellow); color: var(--black); }
 .skip-link:focus { top: 1rem; }
 .site-header, .site-footer { padding: 1rem; background: var(--black); color: var(--yellow); }
 .brand { display: inline-flex; align-items: center; gap: .75rem; color: inherit; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
