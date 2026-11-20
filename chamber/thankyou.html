@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Volta Redonda Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to join the Volta Redonda Chamber of Commerce.">
+    <meta name="author" content="Hugo Almeida">
+    <meta property="og:title" content="Thank You | Volta Redonda Chamber of Commerce">
+    <meta property="og:description" content="Your chamber membership application has been received.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hugolalmeida.github.io/wdd231/chamber/images/chamber-social.png">
+    <meta property="og:url" content="https://hugolalmeida.github.io/wdd231/chamber/thankyou.html">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="images/volta-redonda-coat-of-arms.svg" width="52" height="46" alt=""><span>Volta Redonda Chamber of Commerce</span></a>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+        <nav id="primary-navigation" class="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="join-heading">
+            <p class="eyebrow">Membership application</p>
+            <h1>Thank you for applying</h1>
+            <p>We appreciate your interest in joining the Volta Redonda Chamber of Commerce. Your application details are below.</p>
+        </section>
+        <section class="submission-summary" aria-labelledby="submission-heading">
+            <h2 id="submission-heading">Application details</h2>
+            <p id="submission-message" class="submission-message" role="status" hidden></p>
+            <dl id="submission-details" class="submission-details"></dl>
+        </section>
+        <a class="button-link" href="index.html">Return to the home page</a>
+    </main>
+    <footer class="site-footer">
+        <div>
+            <p><strong>Volta Redonda Chamber of Commerce</strong></p>
+            <p>Volta Redonda, RJ, Brazil</p>
+            <p>Local business resource: <a href="https://www.cdlvr.org.br/fale-conosco">CDL Volta Redonda</a></p>
+            <address>Rua Simão da Cunha Gago, 19 – Aterrado<br><a href="tel:+552433448050">+55&nbsp;(24)&nbsp;3344&#8209;8050</a></address>
+        </div>
+        <div>
+            <p>&copy; <span id="currentyear"></span> Volta Redonda Chamber of Commerce</p>
+            <p>Hugo L. Almeida | WDD 231</p>
+            <p>Last modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -18,8 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/site.js" defer></script>
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,13 +37,143 @@
             </ul>
         </nav>
     </header>
-    <main id="main"><section class="coming-soon"><h1>Join the Chamber</h1><p>Connect with local businesses and discover opportunities to grow together in Volta Redonda.</p><p>Membership details and the application form are coming in a future project update.</p><a class="button-link" href="directory.html">Explore the member directory</a></section></main>
+    <main id="main">
+        <div class="join-heading">
+            <p class="eyebrow">Membership application</p>
+            <h1>Join the Chamber</h1>
+            <p>Connect with local businesses and find the membership level that fits your organization.</p>
+        </div>
+        <div class="join-layout">
+            <form class="application-form" action="thankyou.html" method="get">
+                <h2>Applicant information</h2>
+                <p class="form-instructions">Fields marked required must be completed before submitting.</p>
+                <label>
+                    First name <span aria-hidden="true">*</span>
+                    <input type="text" name="firstName" title="Enter your first name." autocomplete="given-name" required>
+                </label>
+                <label>
+                    Last name <span aria-hidden="true">*</span>
+                    <input type="text" name="lastName" title="Enter your last name." autocomplete="family-name" required>
+                </label>
+                <label>
+                    Organizational title
+                    <input type="text" name="organizationTitle" title="Use at least seven letters, spaces, or hyphens." autocomplete="organization-title" pattern="([A-Za-z]|-| ){7,}">
+                </label>
+                <label>
+                    Email address <span aria-hidden="true">*</span>
+                    <input type="email" name="email" title="Enter your business email address." autocomplete="email" placeholder="name@example.com" required>
+                </label>
+                <label>
+                    Mobile phone number <span aria-hidden="true">*</span>
+                    <input type="tel" name="phone" title="Enter a mobile phone number where we can reach you." autocomplete="tel" required>
+                </label>
+                <label>
+                    Business or organization name <span aria-hidden="true">*</span>
+                    <input type="text" name="organization" title="Enter your business or organization name." autocomplete="organization" required>
+                </label>
+                <label>
+                    Membership level <span aria-hidden="true">*</span>
+                    <select name="membership" title="Choose a membership level." required>
+                        <option value="">Select a membership level</option>
+                        <option value="np">NP Membership — no fee</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business or organization description
+                    <textarea name="description" title="Describe your business or organization." rows="5"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input class="submit-button" type="submit" value="Send membership application">
+            </form>
+
+            <section class="membership-options" aria-labelledby="membership-heading">
+                <h2 id="membership-heading">Membership levels</h2>
+                <p>Explore the benefits included with each level.</p>
+                <div class="membership-cards">
+                    <article class="membership-card">
+                        <h3>NP Membership</h3>
+                        <p>For nonprofit organizations · No fee</p>
+                        <a href="#np-details" aria-haspopup="dialog">View benefits</a>
+                    </article>
+                    <article class="membership-card">
+                        <h3>Bronze Membership</h3>
+                        <p>Example annual fee: R$ 300</p>
+                        <a href="#bronze-details" aria-haspopup="dialog">View benefits</a>
+                    </article>
+                    <article class="membership-card">
+                        <h3>Silver Membership</h3>
+                        <p>Example annual fee: R$ 600</p>
+                        <a href="#silver-details" aria-haspopup="dialog">View benefits</a>
+                    </article>
+                    <article class="membership-card">
+                        <h3>Gold Membership</h3>
+                        <p>Example annual fee: R$ 1,000</p>
+                        <a href="#gold-details" aria-haspopup="dialog">View benefits</a>
+                    </article>
+                </div>
+                <p class="membership-note">Fees are illustrative annual rates for this project.</p>
+            </section>
+        </div>
+
+        <dialog class="membership-dialog" id="np-details" aria-labelledby="np-title">
+            <div class="dialog-content">
+                <h2 id="np-title">NP Membership benefits</h2>
+                <p>No membership fee for qualifying nonprofit organizations.</p>
+                <ul>
+                    <li>Access to member networking events</li>
+                    <li>Nonprofit training and resource sessions</li>
+                    <li>Organization listing in the member directory</li>
+                </ul>
+                <button class="dialog-close" type="button">Close</button>
+            </div>
+        </dialog>
+        <dialog class="membership-dialog" id="bronze-details" aria-labelledby="bronze-title">
+            <div class="dialog-content">
+                <h2 id="bronze-title">Bronze Membership benefits</h2>
+                <p>Example annual fee: R$ 300.</p>
+                <ul>
+                    <li>All NP-level directory and networking benefits</li>
+                    <li>Discounted admission to chamber events</li>
+                    <li>Access to introductory business workshops</li>
+                </ul>
+                <button class="dialog-close" type="button">Close</button>
+            </div>
+        </dialog>
+        <dialog class="membership-dialog" id="silver-details" aria-labelledby="silver-title">
+            <div class="dialog-content">
+                <h2 id="silver-title">Silver Membership benefits</h2>
+                <p>Example annual fee: R$ 600.</p>
+                <ul>
+                    <li>All Bronze-level benefits</li>
+                    <li>Priority discounts on chamber training</li>
+                    <li>One business spotlight on the chamber website each year</li>
+                </ul>
+                <button class="dialog-close" type="button">Close</button>
+            </div>
+        </dialog>
+        <dialog class="membership-dialog" id="gold-details" aria-labelledby="gold-title">
+            <div class="dialog-content">
+                <h2 id="gold-title">Gold Membership benefits</h2>
+                <p>Example annual fee: R$ 1,000.</p>
+                <ul>
+                    <li>All Silver-level benefits</li>
+                    <li>Featured placement in a chamber website spotlight</li>
+                    <li>Invitations to exclusive networking and leadership events</li>
+                    <li>Additional discounts on event sponsorships</li>
+                </ul>
+                <button class="dialog-close" type="button">Close</button>
+            </div>
+        </dialog>
+    </main>
     <footer class="site-footer">
         <div>
             <p><strong>Volta Redonda Chamber of Commerce</strong></p>
             <p>Volta Redonda, RJ, Brazil</p>
             <p>Local business resource: <a href="https://www.cdlvr.org.br/fale-conosco">CDL Volta Redonda</a></p>
-            <address>Rua Simão da Cunha Gago, 19 – Aterrado<br><a href="tel:+552433448050">+55 (24) 3344-8050</a></address>
+            <address>Rua Simão da Cunha Gago, 19 – Aterrado<br><a href="tel:+552433448050">+55&nbsp;(24)&nbsp;3344&#8209;8050</a></address>
         </div>
         <div>
             <p>&copy; <span id="currentyear"></span> Volta Redonda Chamber of Commerce</p>
