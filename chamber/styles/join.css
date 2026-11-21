@@ -1,7 +1,7 @@
 .join-heading { margin: 1.5rem 0; }
 .join-heading h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
 .join-heading > p:last-child { max-width: 55ch; }
-.eyebrow { color: #665500; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.join-heading .eyebrow { color: #665500; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .join-layout { display: grid; gap: 2rem; }
 .application-form, .membership-options { min-width: 0; }
 .application-form { display: grid; gap: 1rem; padding: 1.25rem; border: 1px solid var(--black); border-top: 5px solid var(--yellow); background: var(--surface); }
@@ -39,9 +39,8 @@
 .submission-details div { padding-bottom: .6rem; border-bottom: 1px solid #c8c2a6; }
 .submission-message { margin: 1rem 0; }
 .submission-message:not([hidden]) { display: block; }
-.submission-summary + .button-link { margin: 0 auto; }
-.button-link { display: flex; width: fit-content; align-items: center; justify-content: center; min-height: 48px; margin: 0 auto; padding: .75rem 1.25rem; border: 2px solid var(--yellow); background: var(--yellow); color: var(--black); font-weight: 700; text-decoration: none; }
-.button-link:hover { border-color: var(--black); background: var(--black); color: var(--yellow); }
+.submission-summary + .button-link { display: flex; width: fit-content; align-items: center; justify-content: center; min-height: 48px; margin: 0 auto; padding: .75rem 1.25rem; border: 2px solid var(--yellow); background: var(--yellow); color: var(--black); font-weight: 700; text-decoration: none; }
+.submission-summary + .button-link:hover { border-color: var(--black); background: var(--black); color: var(--yellow); }
 
 @keyframes membership-arrive {
     from { opacity: 0; transform: translateY(12px); }
